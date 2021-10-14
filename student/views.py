@@ -16,7 +16,7 @@ def student_page(request):
             form.save()
             messages.success(request, "Student added successfully")
             return redirect('/student/')
-            return redirect('index')
+            # return redirect('index')
     context = {
         'form': form
     }
