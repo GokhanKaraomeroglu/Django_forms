@@ -17,6 +17,9 @@ def student_page(request):
             messages.success(request, "Student added successfully")
             return redirect('/student/')
             # return redirect('index')
+        else:
+            messages.error(request, "Validation failed")
+            return redirect('/student/')
     context = {
         'form': form
     }
